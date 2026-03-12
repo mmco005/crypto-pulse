@@ -7,19 +7,27 @@ function App() {
   return (
     <CryptoProvider>
       <Router>
-        <nav className="p-5 bg-gradient-to-r from-red-900 to-red-800 text-white flex justify-between shadow-lg">
-          <h1 className="text-xl font-bold tracking-widest">CRYPTO-PULSE</h1>
-          <div className="flex gap-6">
-            <Link to="/" className="hover:text-red-400 transition-colors duration-300">Market</Link>
-            <Link to="/analysis" className="hover:text-red-400 transition-colors duration-300">Analysis</Link>
-          </div>
-        </nav>
-        <main className="flex-1 flex justify-center items-center min-h-[calc(100vh-80px)] bg-gray-900">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/analysis" element={<Analysis />} />
-          </Routes>
-        </main>
+        <div className="min-h-screen bg-gray-950 flex flex-col font-sans">
+          {/* Fixed Navbar */}
+          <nav className="fixed top-0 w-full z-50 p-4 bg-gradient-to-r from-red-950 via-red-900 to-red-800 text-white flex justify-between items-center shadow-2xl border-b border-red-700/30">
+            <h1 className="text-xl font-black tracking-tighter flex items-center gap-2">
+              <span className="bg-white text-red-900 px-2 py-0.5 rounded">PULSE</span>
+              CRYPTO
+            </h1>
+            <div className="flex gap-8 font-medium">
+              <Link to="/" className="hover:text-red-300 transition-all">Market</Link>
+              <Link to="/analysis" className="hover:text-red-300 transition-all">Analysis</Link>
+            </div>
+          </nav>
+
+          {/* Main Content Area */}
+          <main className="mt-20 flex-1 px-4 md:px-10 pb-10">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/analysis" element={<Analysis />} />
+            </Routes>
+          </main>
+        </div>
       </Router>
     </CryptoProvider>
   );
