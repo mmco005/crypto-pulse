@@ -1,16 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #020617; /* Slate 950 for deep contrast */
+  color: white;
 }
 
 a {
@@ -24,10 +19,20 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  display: block; /* Fixes the "centering" issue from your screenshot */
+  min-width: 100%;
   min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #7f1d1d;
+  border-radius: 10px;
 }
 
 h1 {
