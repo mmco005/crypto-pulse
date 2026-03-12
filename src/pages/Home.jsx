@@ -57,16 +57,16 @@ const Home = () => {
           <div key={coin.id} className="p-5 bg-gray-900 rounded-2xl border border-red-900/10 hover:border-red-500/50 transition-all group flex items-center gap-4">
             <img src={coin.image} alt={coin.name} className="w-10 h-10 rounded-full grayscale group-hover:grayscale-0 transition-all" />
             <div className="flex-1">
-              <h3 className="text-white font-bold">{coin.name}</h3>
-              <p className="text-xs text-gray-500 uppercase">{coin.symbol}</p>
+                <h3 className="text-white font-bold">{coin.name}</h3>
+                <p className="text-xs text-gray-400 uppercase">{coin.symbol}</p>
             </div>
             <div className="text-right">
-              <p className="text-white font-mono font-bold">${coin.current_price.toLocaleString()}</p>
-              <p className={`text-xs font-bold ${coin.price_change_percentage_24h > 0 ? 'text-green-500' : 'text-red-500'}`}>
+                <p className="text-white font-mono font-bold">${coin.current_price.toLocaleString()}</p>
+                <p className={`text-xs font-bold ${coin.price_change_percentage_24h > 0 ? 'text-green-500' : 'text-red-500'}`}>
                 {coin.price_change_percentage_24h > 0 ? '▲' : '▼'} {Math.abs(coin.price_change_percentage_24h).toFixed(2)}%
-              </p>
+                </p>
             </div>
-          </div>
+        </div>
         ))}
       </div>
     </div>

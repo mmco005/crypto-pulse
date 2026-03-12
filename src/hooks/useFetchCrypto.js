@@ -18,8 +18,7 @@ export const useFetchCrypto = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=10&page=1`
-        );
+        `https://cors-anywhere.herokuapp.com/https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=10&page=1`)
         
         if (!res.ok) throw new Error("API Rate Limit Reached");
         

@@ -4,7 +4,7 @@
 
 
 :root {
-  background-color: #020617; /* Slate 950 for deep contrast */
+  background-color: #020617; /* Deep Slate/Black */
   color: white;
 }
 
@@ -19,8 +19,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: block; /* Fixes the "centering" issue from your screenshot */
-  min-width: 100%;
+  display: block; /* Disables the default flex centering */
   min-height: 100vh;
 }
 
